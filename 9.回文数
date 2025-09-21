@@ -1,0 +1,14 @@
+class Solution:
+    def isPalindrome(self, x: int) -> bool:
+        x=str(x)         #数字转化成字符串                       
+        y=[]             #创建一个空列表
+        len_x=len(x)     #测量字符串长度
+#将x中内容倒装回y中
+        for i in range(len_x):
+             y.append(x[len_x-1-i])
+        y="".join(y)
+#比对两者是否相同           
+        if x==y:
+            return True 
+        else:
+            return False
